@@ -58,12 +58,12 @@ console.log('Hi '+userName+'\nWelcome to You-know-who the ultimate harry potter 
   enter();
   var userNameWithScore=startGameAndGetScore(userName);
   enter();
-  dash();
+  
   console.log(
       `${userNameWithScore.name}, your final score is ${userNameWithScore.score}/${questionsArr.length} ✔`
  
   );
-  dash();
+
   enter();
   topScores.push(userNameWithScore);
   showHighScore();
