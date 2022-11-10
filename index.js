@@ -50,3 +50,22 @@ function showHighScore() {
     console.log(singleData.name + ' : ' +singleData.score));
   dash();
 }
+function welcome(){
+  
+var userName=readlineSync.question('Whats your name?!');
+console.log('Hi '+userName+'\nWelcome to You-know-who the ultimate harry potter quiz');
+  console.log('Lets start!!');
+  enter();
+  var userNameWithScore=startGameAndGetScore(userName);
+  enter();
+  dash();
+  console.log(
+      `${userNameWithScore.name}, your final score is ${userNameWithScore.score}/${questionsArr.length} ✔`
+ 
+  );
+  dash();
+  enter();
+  topScores.push(userNameWithScore);
+  showHighScore();
+}
+welcome();
